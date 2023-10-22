@@ -8,3 +8,19 @@
 // The first parameter is the mark six result. The second parameter is the bid.
 
 // The function should return true if the bid is contained in the result or otherwise false.
+    // console.log(arr1);
+    // console.log(num);
+
+function checkArrNum(array, num) {
+
+    for (let i = 0; i < array.length; i++) {
+        // console.log(`Index ${i} value is :${array[i]}`);
+        if (num === array[i]) {
+            console.log(`You Win At ${i + 1} turn, Bingo :${num}`);
+        return;
+        }
+    }
+    console.log("You Lose");
+}
+
+checkArrNum([2, 4, 1, 3, 4, 5, 8, 7], 3);

@@ -19,7 +19,7 @@
 
 // console.log("value of players: " + efficiency);
 
-// ------------------------------------------------------------------------------------------
+// ----------------------------w--------------------------------------------------------------
 // Exercise 2 : Leap Year
 
 
@@ -60,14 +60,16 @@
 // The function should return true if the bid is contained in the result or otherwise false.
 
 
-function checkMarkSix(numList, bid) {
+function checkMarkSix(numList,numList2, bid) {
   
 const number = bid;
     if (numList.includes(number)) {
       return true;
-    }else{
+    }if (numList2.includes(number)) {
+      return true;
+    }else{}
       return false;
-}}
+}
   const numList = [1, 3, 5, 7, 9, 11];
   const bid = [1, 3];
   console.log(checkMarkSix(numList, bid)); 
@@ -77,7 +79,7 @@ const number = bid;
   
   const numList2 = [2, 4, 10, 15, 14, 19];
   const bid3 = [2, 19];
-  console.log(checkMarkSix(numList2, bid3)); 
+  console.log(checkMarkSix(numList, bid3)); 
 
   // Bonus 1
   // Create another function quickPicks() that may quickly pick several bids randomly and check against one single result.
