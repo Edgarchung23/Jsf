@@ -20,6 +20,33 @@
 // console.log("value of players: " + efficiency);
 
 // ------------------------------------------------------------------------------------------
+// Exercise 2 : Leap Year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Exercise 6: Mark Six Checker
 // Create a function checkMarkSix() that allow you to determine the prizes of Mark Six. For simplicity, we assume only two numbers are required for a bid and only one prize (win or lose).
@@ -62,9 +89,9 @@ const number = bid;
   // quickPicks([1, 3, 5, 7, 9, 11], 3) 
 
 
-  function quickPicks(numList, bid) {
-    const numer = bid;
-    if
+  // function quickPicks(numList, bid) {
+  //   const numer = bid;
+  //   if
 
-  }
+  
 
