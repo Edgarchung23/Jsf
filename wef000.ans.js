@@ -11,16 +11,21 @@
     // console.log(arr1);
     // console.log(num);
 
-function checkArrNum(array, num) {
 
-    for (let i = 0; i < array.length; i++) {
-        // console.log(`Index ${i} value is :${array[i]}`);
-        if (num === array[i]) {
-            console.log(`You Win At ${i + 1} turn, Bingo :${num}`);
-        return;
-        }
-    }
-    console.log("You Lose");
-}
 
-checkArrNum([2, 4, 1, 3, 4, 5, 8, 7], 3);
+
+
+
+// function checkArrNum(array, num) {   //************************************
+
+//     for (let i = 0; i < array.length; i++) {
+//         // console.log(`Index ${i} value is :${array[i]}`);
+//         if (num === array[i]) {
+//             console.log(`You Win At ${i + 1} turn, Bingo :${num}`);
+//         return;
+//         }
+//     }
+//     console.log("You Lose");
+// // }
+
+// checkArrNum([2, 4, 1, 3, 4, 5, 8, 7], 3);
