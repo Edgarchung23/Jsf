@@ -60,18 +60,20 @@
 // The function should return true if the bid is contained in the result or otherwise false.
 
 
-function checkMarkSix(numList,numList2, bid) {
+function checkMarkSix(numList,numList2) {
   
 const number = bid;
+  // console.log(numList);
     if (numList.includes(number)) {
+    return true;
+    }else if(numList2.includes(number)) 
       return true;
-    }if (numList2.includes(number)) {
-      return true;
-    }else{}
+    else{
       return false;
-}
+    }
+  }
   const numList = [1, 3, 5, 7, 9, 11];
-  const bid = [1, 3];
+  const bid = [1, 3]
   console.log(checkMarkSix(numList, bid)); 
   
   const bid2 = [2, 3];
@@ -80,6 +82,10 @@ const number = bid;
   const numList2 = [2, 4, 10, 15, 14, 19];
   const bid3 = [2, 19];
   console.log(checkMarkSix(numList, bid3)); 
+
+  checkMarkSix([1, 3, 5, 7, 9, 11], [1, 3]); // returns: true
+  checkMarkSix([1, 3, 5, 7, 9, 11], [2, 3]); // returns: false
+  checkMarkSix([2, 4, 10, 15, 14, 19], [2, 19]) // returns: true
 
   // Bonus 1
   // Create another function quickPicks() that may quickly pick several bids randomly and check against one single result.
