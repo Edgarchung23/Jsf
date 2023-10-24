@@ -6,4 +6,4 @@
 // git commit -m""
 // git push``
 //
-Hell yeah
+000000
