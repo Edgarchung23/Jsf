@@ -52,7 +52,7 @@ console.log(quickPicks([1, 3, 5, 7, 9, 11], 15));
 
 // Bonus2
 // genPicks
-// Continued with the Quick Pick function, do not return the result immediately. Instead, print the result one by one with one second interval.
+// Continued with the Quick Pick function, do not     return the result immediately. Instead, print the result one by one with one second interval.
 
 // function checkArrNum(array, num) {   //************************************
 // console.log(arr1);
