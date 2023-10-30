@@ -11,6 +11,7 @@
 // console.log(students)
 
 
+
 const students = [
     {"name": "Gordon", "age": 30},
     {"name": "Alex", "age": 31},
@@ -18,58 +19,58 @@ const students = [
 ]   
 // Mutation     //可改變
 // array.push, array.pop, array.shift, array.unshift 
-students.sort(function(studentA, studentB){
-    if (studentA.name > studentB.name) {
-        return 1
+// students.sort(function(studentA, studentB){
+//     if (studentA.name > studentB.name) {
+//         return 1
 
-    }else if (studentA.name < studentB.name) { //留意一下大細階，經常打錯
-        return -1
-    }else{
-        return 0
-    }
-})
+//     }else if (studentA.name < studentB.name) { //留意一下大細階，經常打錯
+//         return -1
+//     }else{
+//         return 0
+//     }
+// }) 
+// console.log(students)
 
 // Immutation 
-console.log(students.findIndex(function(student) {  //findInxde = 需要放function讓array執行
- if (student.name == "Alex") {
-    return true;
-    }else{
-    return false;
-}
-}))
+// console.log(students.findIndex(function(student) {  //findInxde = 需要放function讓array執行
+//  if (student.name == "Alex") {
+//     return true;
+//     }else{
+//     return false;
+// }
+// }))
 
 console.log(students.some(function(student){
-    if (student.age > 40) {
+    if (student.age > 30) {
         return true
     }
 }))
+// console.log(students.find(function(student) {
+//     if (student.name == "Alex") {
+//         return true
+//     }else {
+//         return false;x   
+//     }
+// }).age)     //可以在find-function()結束後加上.age ETC
 
-console.log(students.find(function(student) {
-    if (student.name == "Alex") {
-        return true
-    }else {
-        return false;
-    }
-}).age)     //可以在find-function()結束後加上.age ETC
 
+// // .map, .filter, .reduce   
+// console.log(students.map(function(student) {    //.map  N input N output
+//     return student.name     
+// }))
 
-// .map, .filter, .reduce   
-console.log(students.map(function(student) {    //.map  N input N output
-    return student.name     
-}))
+// console.log(students.filter(function(student) {
+//     return (student.age <= 30 )
+//     }
+// ))
 
-console.log(students.filter(function(student) {
-    return (student.age <= 30 )
-    }
-))
-
-let x = 0
-let qualifiedStudents = [];
-while (x < students.length) {
-    if (students[x].age <= 30) {
-        qualifiedStudents.push(students[x])
-    }
-    x++;
-}
-console.log(qualifiedStudents)
-console.log(students)
+// let x = 0
+// let qualifiedStudents = [];
+// while (x < students.length) {
+//     if (students[x].age <= 30) {
+//         qualifiedStudents.push(students[x])
+//     }
+//     x++;
+// }
+// console.log(qualifiedStudents)
+// console.log(students)

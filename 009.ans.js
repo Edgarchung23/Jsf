@@ -7,18 +7,18 @@
 // // }
 // // console.log (Range(5))
 
-function range(num) {
-    let x = 0
-    let arr = []
-    while (x < num) {
-        arr.push(x)
-        x = x + 1
-    }
-    return(arr)
+// function range(num) {
+//     let x = 0
+//     let arr = []
+//     while (x < num) {
+//         arr.push(x)
+//         x = x + 1
+//     }
+//     return(arr)
 
-}
-console.log(range(10))
-console.log(range(5))
+// }
+// console.log(range(10))
+// console.log(range(5))
 
 
 // const Staff = [
@@ -50,8 +50,6 @@ function bonusCalculator(year, performance, salary) {
             return salary * 1;
         }
         return 0;       //如果兩個條件都沒有滿足需要return 0，否則consolelog後會出現NAN
-
-
 }
 console.log(bonusCalculator(6,false, 10000))
 console.log(bonusCalculator(5.5,true, 40000))
@@ -59,11 +57,11 @@ console.log(bonusCalculator(3,true, 80000))
 console.log(bonusCalculator(7,true, 70000))
 console.log(bonusCalculator(0.5,true, 20000))
 
-console.log(
-    bonusCalculator(6,false, 10000) + 
-    bonusCalculator(5.5,true, 40000) + 
-    bonusCalculator(3,true, 80000) +
-    bonusCalculator(7,true, 70000) +
-    bonusCalculator(0.5,true, 20000))
+// console.log(
+//     bonusCalculator(6,false, 10000) + 
+//     bonusCalculator(5.5,true, 40000) + 
+//     bonusCalculator(3,true, 80000) +
+//     bonusCalculator(7,true, 70000) +
+//     bonusCalculator(0.5,true, 20000))
 
     

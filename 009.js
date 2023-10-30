@@ -1,6 +1,6 @@
 //funtion
 function sayHello(name) {   //執行function指令，打function名加()
-    console.log("Saye Hello")       //內容
+    console.log("Say Hello")       //內容
     console.log("`Hello! " + name + "`")
 
 }
