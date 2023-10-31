@@ -31,7 +31,7 @@
     // if is object, check if is aaray
     // if is array, use for ...of
     // else use for ...in
-}
+// }
 
 //-----------------------------------------------------------------------------------------------
 const data = [
@@ -92,13 +92,30 @@ const data = [
     cioc: "HKG",
   },
 ];
-
+function convertFirstCharCapital(input) {
+  let firstLetter = input.charAt(0).toUpperCase()
+  let body = input.slice(1)
+  return firstLetter + body }
+// }
 const hk = data[0];
+for (let firstKey in hk){
+  if (Array.isArray(hk[firstKey])){
+   console.log(convertFirstCharCapital(firstKey), ":" , hk[firstKey])
+    
+}
 
-for (let key in hk) {
-    if (key == /* some key here*/) {
-
-    } else {
-        console.log(key + ": " + hk[key]);
+}
+for (let firstKey in hk) {
+  if (Array.isArray(hk[firstKey])) {
+    for (const itemValue of hk[firstKey]) {
+      console.log(convertFirstCharCapital(firstKey), "_" , hk[firstKey])
+      if (itemValue instanceof Object){
+        for (const objectKey in itemValue)
+        console.log(convertFirstCharCapital(firstKey) + ":" + hk[firstKey])
+      }
     }
+  }else{
+    console.log((convertFirstCharCapital(firstKey) + "_" + hk[firstKey]))
+
+  }
 }
