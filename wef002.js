@@ -25,6 +25,14 @@ const peter = {
     ],
   };
 
+  for(let student of peter.students){
+    if(student.name == 'Bob'){
+        console.log("Found Bob!!!", student)
+        break;
+    }
+    console.log("hi you are inspected")
+  }
+
 //   console.log(`peter's age: ${peter.age}`);
 //   console.log("peter's age",peter.age)
 
@@ -36,29 +44,29 @@ const peter = {
 //   }
 
 // for...of 
-for (const item of peter.students) {
-    console.log(item)
-}
+// for (const item of peter.students) {
+//     console.log(item)
+// }
 
 // for...in
-for(const item in peter.students) {
-    for(const key in item){
-        // determine if item[key] is an array ;
-        // if is array, iterate array;
-        // if is string/number, just console simply;
-        if(Array.isArray(item[key])){
-            console.log("the value is array")
-            for (const entry of item[key]) {
-                // iterate exercise objecy array
-                for (const key in entry) {
-                    console.log(`{key}: ${entry[key]}`);
-            }
-        }
-    } else {
-        console.log(`${key} : ${item[key]}`)
-    }
- }
-}
+// for(const item in peter.students) {
+//     for(const key in item){
+//         // determine if item[key] is an array ;
+//         // if is array, iterate array;
+//         // if is string/number, just console simply;
+//         if(Array.isArray(item[key])){
+//             console.log("the value is array")
+//             for (const entry of item[key]) {
+//                 // iterate exercise objecy array
+//                 for (const key in entry) {
+//                     console.log(`{key}: ${entry[key]}`);
+//             }
+//         }
+//     } else {
+//         console.log(`${key} : ${item[key]}`)
+//     }
+//  }
+// }
 
 //   for (let student of peter.students) {
 //     console.log(`Student ${student.name} is ${student.age} years old`);
