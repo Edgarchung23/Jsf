@@ -1,32 +1,68 @@
 //Gigasecond
 
-gigasecond (){}
-const birthDate = new Date((2015, 1, 24, 10, 0, 0));
-const copy = new Date();
-copy.setTime(birthDate.getTime());
-console.log(birthDate.toLocaleDateString());
+// gigasecond() 
+// const birthDate = new Date((2015, 1, 24, 10, 0, 0));
+// const copy = new Date();
+// copy.setTime(birthDate.getTime());
+// console.log(birthDate.toLocaleDateString());
 
 
 
 
 
 
-// const peter = {
-//     name: "Peter",
-//     age: 50,
-//     students: [
-//       { name: "Andy", age: 20 },
-//       { name: "Bob", age: 23 },
-//       {
-//         name: "Charlie",
-//         age: 25,
-//         exercises: [{ score: 60, date: new Date("2019-01-05") }],
-//       },
-//     ],
-//   };
-// //   for (let student of peter.students) {
-// //     console.log(`Student ${student.name} is ${student.age} years old`);
-// //   }
+const peter = {
+    name: "Peter",
+    age: 50,
+    students: [
+      { name: "Andy", age: 20 },
+      { name: "Bob", age: 23 },
+      {
+        name: "Charlie",
+        age: 25,
+        exercises: [{ score: 60, date: new Date("2019-01-05") },{ score: 60, date: new Date("2011-01-05") },{ score: 80, date: new Date("2019-01-05") }],
+      },
+    ],
+  };
+
+//   console.log(`peter's age: ${peter.age}`);
+//   console.log("peter's age",peter.age)
+
+
+//   //iterate 
+//   console.log("number of students in peter.students:", peter.students.length);
+//   for(let i = 0; i < peter.students.length; i++) {
+//     console.log(peter.students[i]);
+//   }
+
+// for...of 
+for (const item of peter.students) {
+    console.log(item)
+}
+
+// for...in
+for(const item in peter.students) {
+    for(const key in item){
+        // determine if item[key] is an array ;
+        // if is array, iterate array;
+        // if is string/number, just console simply;
+        if(Array.isArray(item[key])){
+            console.log("the value is array")
+            for (const entry of item[key]) {
+                // iterate exercise objecy array
+                for (const key in entry) {
+                    console.log(`{key}: ${entry[key]}`);
+            }
+        }
+    } else {
+        console.log(`${key} : ${item[key]}`)
+    }
+ }
+}
+
+//   for (let student of peter.students) {
+//     console.log(`Student ${student.name} is ${student.age} years old`);
+//   }
 
 //   for (let student of peter.students) {
 //     if (student.exercises) { // Is `student.exercises` exist on the target object
@@ -37,6 +73,9 @@ console.log(birthDate.toLocaleDateString());
 //       }
 //     }
 //   }
+
+
+
 
 
 //   const data = [
