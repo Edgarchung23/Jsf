@@ -6,11 +6,21 @@
     display: flex;
     flex-wrap: wrap;
     border: solid;
+    border-color:aliceblue;
     align-content:center;
+    
 } 
 .box{
-    background-color: rgb(159, 233, 247);
+    background-color: rgba(159, 232, 247, 0.442);
+    display: flex;  
     width: 110px;
     height: 110px; 
-    margin: 11px;
+    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    border: solid;
+    border-color: rgb(145, 245, 245);
+
+
 }
