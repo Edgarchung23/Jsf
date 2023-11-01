@@ -90,32 +90,28 @@ const data = [
     flag: "https://flagcdn.com/hk.svg",
     regionalBlocs: [],
     cioc: "HKG",
-  },
-];
-function convertFirstCharCapital(input) {
-  let firstLetter = input.charAt(0).toUpperCase()
-  let body = input.slice(1)
-  return firstLetter + body }
-// }
-const hk = data[0];
-for (let firstKey in hk){
-  if (Array.isArray(hk[firstKey])){
-   console.log(convertFirstCharCapital(firstKey), ":" , hk[firstKey])
-    
-}
-
-}
-for (let firstKey in hk) {
-  if (Array.isArray(hk[firstKey])) {
-    for (const itemValue of hk[firstKey]) {
-      console.log(convertFirstCharCapital(firstKey), "_" , hk[firstKey])
-      if (itemValue instanceof Object){
-        for (const objectKey in itemValue)
-        console.log(convertFirstCharCapital(firstKey) + ":" + hk[firstKey])
+  }];
+  const hk = data[0];
+  function convertFirstCharCapital(input) {
+    let firstLetter = input.charAt(0).toUpperCase()
+    let body = input.slice(1)
+    return firstLetter + body }
+  
+  for (let firstKey in hk) {
+      if (Array.isArray(hk[firstKey])) {
+          for (const itemValue of hk[firstKey]) {
+            for (let secondKey in hk[firstKey]) {
+              if ( hk[1]== currencies) {}
+            }
+              console.log(convertFirstCharCapital(firstKey), "array:", itemValue)
+              if (itemValue instanceof Object) {
+                  for (const objectKey in itemValue)
+                  console.log(convertFirstCharCapital(firstKey) + "_" + itemValue + "obj"
+                  + itemValue[objectKey])
+              }
+          }
+      }else{
+          console.log(convertFirstCharCapital(firstKey), ":", hk[firstKey]);
       }
-    }
-  }else{
-    console.log((convertFirstCharCapital(firstKey) + "_" + hk[firstKey]))
-
   }
-}
+  
