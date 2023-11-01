@@ -96,22 +96,27 @@ const data = [
     let firstLetter = input.charAt(0).toUpperCase()
     let body = input.slice(1)
     return firstLetter + body }
-  
-  for (let firstKey in hk) {
-      if (Array.isArray(hk[firstKey])) {
-          for (const itemValue of hk[firstKey]) {
-            for (let secondKey in hk[firstKey]) {
-              if ( hk[1]== currencies) {}
-            }
-              console.log(convertFirstCharCapital(firstKey), "array:", itemValue)
-              if (itemValue instanceof Object) {
-                  for (const objectKey in itemValue)
-                  console.log(convertFirstCharCapital(firstKey) + "_" + itemValue + "obj"
-                  + itemValue[objectKey])
-              }
-          }
-      }else{
-          console.log(convertFirstCharCapital(firstKey), ":", hk[firstKey]);
+
+    
+    for (let firstKey in hk) {
+      const itemValue = hk[firstKey]
+      if (Array.isArray(itemValue)) {
+        if (!itemValue instanceof Object) {
+          console.log(convertFirstCharCapital(firstKey) + ":" + itemValue.join(","))
+    }else{
+      for (let a of itemValue) {
+        for (let key in a) {
+          console.log(convertFirstCharCapital(firstKey) + "_" + key + ":" + a[key])
+    
+        }
       }
-  }
+    }
+    }else if (itemValue instanceof Object) {
+      for (let key in itemValue) {
+        console.log(convertFirstCharCapital(firstKey) + "_" + key + ":" + itemValue[key])
+      }
+    }else{
+      console.log(convertFirstCharCapital(firstKey) + ":" + itemValue)
+    }
+    }
   

@@ -1,3 +1,22 @@
+function compareCard(cardA, cardB) {
+    const ranks = [
+        "2","3","4","5","6","7","8","9","10",
+        "J","Q","K","A"
+    ];
+
+    const suits = ["Diamond", "Club", "Heart", "Spade"];
+
+    const [suitA, rankA] = cardA;
+    const [suitB, rankB] = cardB;
+
+    const ranksDiff = ranks.indexOf(rankA) - ranks.indexOf(rankB);
+    
+    if (ranksDiff !== 0) {
+        return ranksDiff;
+    } else {
+        return suits.indexOf(suitA) - suits.indexOf(suitB);
+    }
+}
 const cards = [
     ["Spade", "A"],
     ["Diamond", "J"],
@@ -16,38 +35,54 @@ const cards = [
     ["Club", "7"],
   ];
 
-// count the number of card which is of rank3
-const  result = cards.reduce((acc,currentCard)=>{
+  
+// const result = cards.reduce((acc,currentCard) =>{
+//     // console.log(currentCard);
+//     let cardValue = currentCard[1][0];
+//     console.log([currentCard[0], cardValue])
+//     if (cardValue < "3") {
+//         return ;
+//     }else{
+//         return ;
+//     } 
+//  },0)
+//   compareCard(['Club', '2'], ['club', '3'])
+//  console.log("Remove", result)
+    
 
-    console.log(currentCard);
-    if(currentCard[1] == "3") {
-        return acc + 1;
-    }else{
-        return acc
-    }},0)
-    console.log("number of card rank 3:", result);
+
+// count the number of card which is of rank3
+// const  result = cards.reduce((acc,currentCard)=>{
+
+//     console.log(currentCard);
+//     if(currentCard[1] == "3") {
+//         return acc + 1;
+//     }else{
+//         return acc
+//     }},0)
+//     console.log("number of card rank 3:", result);
 
     
 // --------------------------------------------------------------------------
-// function compareCard(cardA, cardB) {
-//     const ranks = [
-//         "2","3","4","5","6","7","8","9","10",
-//         "J","Q","K","A"
-//     ];
+function compareCard(cardA, cardB) {
+    const ranks = [
+        "2","3","4","5","6","7","8","9","10",
+        "J","Q","K","A"
+    ];
 
-//     const suits = ["Diamond", "Club", "Heart", "Spade"];
+    const suits = ["Diamond", "Club", "Heart", "Spade"];
 
-//     const [suitA, rankA] = cardA;
-//     const [suitB, rankB] = cardB;
+    const [suitA, rankA] = cardA;
+    const [suitB, rankB] = cardB;
 
-//     const ranksDiff = ranks.indexOf(rankA) - ranks.indexOf(rankB);
+    const ranksDiff = ranks.indexOf(rankA) - ranks.indexOf(rankB);
     
-//     if (ranksDiff !== 0) {
-//         return ranksDiff;
-//     } else {
-//         return suits.indexOf(suitA) - suits.indexOf(suitB);
-//     }
-// }
+    if (ranksDiff !== 0) {
+        return ranksDiff;
+    } else {
+        return suits.indexOf(suitA) - suits.indexOf(suitB);
+    }
+}
 
 // // Usage
 // compareCard(["Diamond", "3"], ["Spade", "5"]);   // -2
