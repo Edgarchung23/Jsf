@@ -1,0 +1,16 @@
+.big-container {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 400px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    align-content:center;
+} 
+.box{
+    background-color: rgb(159, 233, 247);
+    width: 110px;
+    height: 110px; 
+    margin: 11px;
+}

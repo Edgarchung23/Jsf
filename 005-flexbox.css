@@ -1,0 +1,18 @@
+.big-container {
+    background-color: rgb(76, 240, 240);
+    width: 900px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    
+.box {
+    background-color: rgb(245, 176, 29);
+    width: 900px;
+    height: 900px;
+    margin: 100px;
+
+
+
+}
+
+}

@@ -1,3 +1,7 @@
+// return 0 : Both card are same;
+// >=1 : Former card ranking is higher;
+// <= -1 : Former card ranking is lower;
+
 function compareCard(cardA, cardB) {
     const ranks = [
         "2","3","4","5","6","7","8","9","10",
@@ -17,6 +21,7 @@ function compareCard(cardA, cardB) {
         return suits.indexOf(suitA) - suits.indexOf(suitB);
     }
 }
+
 const cards = [
     ["Spade", "A"],
     ["Diamond", "J"],
@@ -35,34 +40,22 @@ const cards = [
     ["Club", "7"],
   ];
 
-  
-// const result = cards.reduce((acc,currentCard) =>{
-//     // console.log(currentCard);
-//     let cardValue = currentCard[1][0];
-//     console.log([currentCard[0], cardValue])
-//     if (cardValue < "3") {
-//         return ;
-//     }else{
-//         return ;
-//     } 
-//  },0)
-//   compareCard(['Club', '2'], ['club', '3'])
-//  console.log("Remove", result)
+  const array1 = [1,2, 3,4,5]
+  const aarray = array1.map((x) => {
+    return x + 1
+  })
+  console.log(aarray);
+ if (Array.isArray(array1)) {
+    for (let key of aarray) {
+console.log(key);
+    }
+
+ }
+ 
+// Q1 : Count the number of card which is of suit Spade ♠️. (Hints: using reduce)
     
 
 
-// count the number of card which is of rank3
-// const  result = cards.reduce((acc,currentCard)=>{
-
-//     console.log(currentCard);
-//     if(currentCard[1] == "3") {
-//         return acc + 1;
-//     }else{
-//         return acc
-//     }},0)
-//     console.log("number of card rank 3:", result);
-
-    
 // --------------------------------------------------------------------------
 function compareCard(cardA, cardB) {
     const ranks = [
